@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  padding-left: 16rem;
+}
+
+/* Make the sidebar responsive */
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  main {
+    padding-left: 0;
+  }
+}
+
+/* Add some styles to the sidebar */
+aside {
+  transition: width 0.3s ease-in-out;
+}
+
+aside.w-16 {
+  width: 4rem;
+}
+
+aside.w-64 {
+  width: 16rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
