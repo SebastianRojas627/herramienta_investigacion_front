@@ -118,3 +118,18 @@ export interface DetailsSegip {
     vehiculos: ListItv[];
   };
 }
+
+export interface Log {
+  id: string;
+  busqueda: string;
+  tipo: string;
+  created_at: string;
+  user_id: string;
+}
+
+export interface UserLog {
+  firstName: string;
+  lastName: string;
+  rank: string;
+  email: string;
+}

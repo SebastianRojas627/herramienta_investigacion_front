@@ -6,7 +6,6 @@ interface PersonaModalProps {
   title: string;
   documento: string;
   closeModal: () => void;
-  openModal: (type: "persona" | "vehiculo", id: string) => void;
 }
 
 const PersonaModal: React.FC<PersonaModalProps> = ({
@@ -33,6 +32,8 @@ const PersonaModal: React.FC<PersonaModalProps> = ({
     };
 
     fetchPersona();
+
+    document.body.classList.add("overflow-hidden");
   }, []);
 
   return (

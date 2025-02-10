@@ -44,10 +44,6 @@ const PersonaVehiculoForm = () => {
     setOpenModals((prev) => prev.filter((modal) => modal.id !== id));
   };
 
-  const openModal = (type: "persona" | "vehiculo", id: string) => {
-    setOpenModals((prev) => [...prev, { type, id }]);
-  };
-
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.target.value);
     setResponseData([]);
@@ -375,7 +371,6 @@ const PersonaVehiculoForm = () => {
               title={modal.type}
               documento={modal.id}
               closeModal={() => closeModal(modal.id)}
-              openModal={openModal}
             />
           );
         } else if (modal.type === "vehiculo") {
@@ -385,7 +380,6 @@ const PersonaVehiculoForm = () => {
               title={modal.type}
               placa={modal.id}
               closeModal={() => closeModal(modal.id)}
-              openModal={openModal}
             />
           );
         }

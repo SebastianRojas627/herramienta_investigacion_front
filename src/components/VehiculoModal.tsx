@@ -6,7 +6,6 @@ interface VehicleModalProps {
   title: string;
   placa: string;
   closeModal: () => void;
-  openModal: (type: "persona" | "vehiculo", id: string) => void;
 }
 
 const VehicleModal: React.FC<VehicleModalProps> = ({ placa, closeModal }) => {

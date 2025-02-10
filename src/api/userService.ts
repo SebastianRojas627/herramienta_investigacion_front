@@ -1,4 +1,5 @@
 import apiClient from "./apiClient";
+import { UserLog } from "./types";
 
 export const getUsers = async () => {
   const response = await apiClient.get("auth/get-users");
@@ -34,7 +35,7 @@ export const updateUser = async (formData: any) => {
   return response.data;
 };
 
-export const getLogUser = async (id: string) => {
+export const getLogUser = async (id: string): Promise<UserLog> => {
   const response = await apiClient.get(`auth/log-user/${id}`);
   return response.data;
 };
